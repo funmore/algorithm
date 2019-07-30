@@ -1,18 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!-- <div>
+    <img alt="Vue logo" src="./assets/logo.png"> -->
+    <div>
+    <span> father msg:    {{fatherMsg}}</span>
+
+    <props-change :PropMsg="fatherMsg"></props-change>
+    <button @click="onFatherClick">father button</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import Algorithm from './components/Algorithm.vue'
+// import VueFrame from './components/VueFrame.vue'
+// import PromiseTest from './components/PromiseTest.vue'
+// import PropsChange from './components/PropsChange.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    // Algorithm,
+    // VueFrame
+    // PromiseTest,
+    // PropsChange
+    
+  },
+  data(){
+    return {
+      fatherMsg:0
+    };
+  },
+  methods:{
+    onFatherClick(){
+      this.fatherMsg=Math.random();
+    }
   }
+    
 }
 </script>
 
